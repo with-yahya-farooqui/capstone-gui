@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://prodraw.net/favicon/download.php?file=ngu82py2_1.ico" type="image/x-icon" />
+    <title>PriCifer</title>
+    <link rel="icon" href="img34.jpeg" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+<!--     <link rel="stylesheet" href="stylea.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Region', '% Urban Population', 'Electricity C/kwh'],
+          ['North',  25.34,      30.7],
+          ['South',  39.46,      32.6],
+          ['East', 19.27,       31.1],
+          ['West',  39.17,      18.4],
+          ['North East',  19.07,      38.3]
+        ]);
+
+        var options = {
+          title: '',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+          
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Region', 'Electrcity Consumption'],
+          ['North',     45353],
+          ['South',     40654 ],
+          ['West',  47962],
+          ['East', 18617],
+          ['North East',    2435]
+        ]);
+
+        var options = {
+          title: '',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+       google.charts.load('current', {'packages':['corechart']});
+       google.charts.setOnLoadCallback(drawVisualization);
+ 
+       function drawVisualization() {
+         // Some raw data (not necessarily accurate)
+         var data = google.visualization.arrayToDataTable([
+           ['Month', '2016', '2017', '2018', '2019', '2020', 'Population'],
+           ['North',  81505,      130459,         150599,             60122,           72253,      36707.8129],
+           ['West',  90625,      142948,        169442,             67797,          81012,      29571.1593],
+           ['South',  100940,      157594,       189098,             77356,           89671,      30575.9987],
+           ['East',  103319,      170045,        206461,             81405,          100059,      29665.4616],
+           ['North East',  100888,      168293,         210266,             82123,         100069,      50080.598]
+         ]);
+ 
+         var options = {
+           title : '',
+           vAxis: {title: 'Cups'},
+           hAxis: {title: 'Month'},
+           seriesType: 'bars',
+           series: {5: {type: 'line'}}
+         };
+ 
+         var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+         chart.draw(data, options);
+       }
+     </script>
+   
+
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#" style="background-color:rgba(36, 29, 29, 0.7); color:rgb(252, 252, 252)">Pri<span>Cipher</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">Project</a></li>
+                <li><a href="#services" class="menu-btn">Technology</a></li>
+                <li><a href="#skills" class="menu-btn">Prediction</a></li>
+                <li><a href="#teams" class="menu-btn">T9 Group</a></li>
+                <li><a href="#contact" class="menu-btn">Feedback</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content" style="background-color:rgba(0,0,0,0.7)">
+                <div class="text-1">On behalf of T9 Group,</div>
+                <div class="text-2">Welcome to the Pri<span>Cipher</span>!</div>
+                <div class="text-3">Here, you get <span class="typing"></span></div>
+                <a href="#skills">Predict Price</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">The Project</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="vit.png" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">Using <span class="typing-2"></span>,</div>
+                    <p>We present PriCipher, a graphical user interface which can predict the prices of the 2 major crops namely: RICE and WHEAT of all the states of the Republic of India.<br>Since food grains are the most important part of the diet of any household, all efforts must be made to ensure stability of prices and adequate competition, which will ensure prosperity for farmers, consumers and the national economy at large. <br>Our project aims to rigorously study the factors affecting food grain prices in various parts of the country and to predict with reasonable accuracy the future course which the aforementioned prices will take, and which can be used as a tool by farmers, consumers and policymakers.
+                        .<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">Our Technology</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fab fa-python"></i>
+                        <div class="text">Python</div>
+                        <p>Being a language with a simple syntax, rich libraries and many user-friendly platforms, Python was employed by T9 Group for data science.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fab fa-js-square"></i>
+                        <div class="text">JavaScript</div>
+                        <p>JavaScript is an astonishingly versatile and rich programming language, with the additional benefit of being object oriented and the language of the web.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">HTML & CSS</div>
+                        <p>No website is can function without extensive usage of the Hyper Text Markup Language(HTML) and Cascading Style Sheets(CSS) and never will. </p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+         
+    </section>
+   <!-- chart section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">Data Visualization</h2>
+           
+        </div>
+    </section>
+<!--     <section class="about" id="about">
+        <div class="max-width">   
+            <h1 class="title"> Graphical Animation </h1>
+        </div> 
+    </section >   -->
+<!--     <div class="slideshow-container">
+
+    <div class="mySlides fade">
+    
+    <img src="consumption 2016.png" style="width:100%">
+    
+    </div>
+
+    <div class="mySlides fade">
+    
+    <img src="consumption 2018.png" style="width:100%">
+    
+    </div>
+
+    <div class="mySlides fade">
+   
+    <img src="consumption 2020.png" style="width:100%">
+    
+    </div>
+
+    <div class="mySlides fade">
+    
+    <img src="% urban pop.  2016.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+    
+    <img src="% urban pop.  2018.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+    
+    <img src="% urban pop.  2020.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+    
+    <img src="Electricity Ckwh   2016.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+    
+    <img src="Electricity Ckwh   2018.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides fade">
+   
+    <img src="Electricity Ckwh   2020.png" style="width:100%">
+    
+    </div>
+    </div>
+    <br>
+</div6>   -->
+    <h1 class="title" style="font-family: 'Poppins', cursive;margin-left: 100px;"> Rice Price/Kg  </h1>
+    <div id="curve_chart" style="width: 1400px; height: 700px" ></div>
+    <h1 class="title" style="font-family: 'Poppins', cursive;margin-left: 100px;"> Wheat Price/Kg  </h1>
+    <div id="piechart_3d" style="width: 1400px; height: 500px;"></div>
+    <h1 class="title" style="font-family: 'Poppins', cursive;margin-left: 100px;"> GDP Per Capita & Population  </h1>
+    <div id="chart_div" style="width: 1400px; height: 700px;"></div>
+    
+
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">Prediction</h2>
+            <div class="skills-content">
+                <div>
+                    <h4><div class="text-1" style="color:black">Predict monthly Crop Prices in your state, for 2021 to 2025.</div></h4>
+                    <form id="form" onsubmit="exec();">
+                        <label for="crop(Rice/Wheat)" class="title" style="color:rgb(68, 216, 23)">Enter crop(Rice/Wheat):</label>
+                        <input type="text" id="crop(Rice/Wheat)" name="crop(Rice/Wheat)" style="color:black"><br><br><br><br><br>
+                        <label for="state" class="title" style="color:rgb(68, 216, 23)">Enter state:</label>
+                        <input type="text" id="state" name="state" style="color:black"><br><br><br><br><br>
+                        <label for="year" class="title" style="color:rgb(68, 216, 23)">Enter year:</label>
+                        <input type="text" id="year" name="month" style="color:black"><br><br><br><br><br>
+                        <label for="month" class="title" style="color:rgb(68, 216, 23)">Enter month:</label>
+                        <input type="text" id="month" name="month" style="color:black"><br><br><br><br><br>
+                        <!-- <input type="submit" value="Submit"> -->
+                        <script>
+                            function exec() 
+{
+        document.getElementById("form").submit();
+        var reg=(document.getElementById("state").value),y=+(document.getElementById("year").value),m=+(document.getElementById("month").value);
+        const pred=['49647.73446',
+ '51015.44785',
+ '49525.89352',
+ '48540.56291',
+ '50412.50003',
+ '51107.91514',
+ '51299.10653',
+ '50313.77591',
+ '52185.71303',
+ '49687.71126',
+ '49710.82808',
+ '52423.13806',
+ '53498.52634',
+ '54866.23974',
+ '53376.68541',
+ '52391.35479',
+ '54263.29191',
+ '54958.70702',
+ '55149.89841',
+ '54164.5678',
+ '56036.50491',
+ '53538.50315',
+ '53561.61997',
+ '56273.92995',
+ '56771.84611',
+ '58139.55951',
+ '56650.00518',
+ '55664.67456',
+ '57536.61168',
+ '58232.02679',
+ '58423.21818',
+ '57437.88757',
+ '59309.82468',
+ '56811.82292',
+ '56834.93974',
+ '59547.24972',
+ '58025.75801',
+ '59393.47141',
+ '57903.91708',
+ '56918.58647',
+ '58790.52358',
+ '59485.93869',
+ '59677.13008',
+ '58691.79947',
+ '60563.73659',
+ '58065.73482',
+ '58088.85164',
+ '60801.16162',
+ '59098.14937',
+ '60465.86276',
+ '58976.30843',
+ '57990.97782',
+ '59862.91494',
+ '60558.33004',
+ '60749.52144',
+ '59764.19082',
+ '61636.12794',
+ '59138.12617',
+ '59161.24299',
+ '61873.55297',
+ '45544.02639',
+ '45903.29236',
+ '45926.40918',
+ '46117.60057',
+ '46308.79196',
+ '47340.35622',
+ '47867.69675',
+ '44697.3967',
+ '48418.15411',
+ '47432.8235',
+ '46447.49288',
+ '47815.20628',
+ '49501.1954',
+ '49860.46136',
+ '49883.57818',
+ '50074.76957',
+ '50265.96097',
+ '51297.52522',
+ '51824.86576',
+ '48654.5657',
+ '52375.32311',
+ '51389.9925',
+ '50404.66189',
+ '51772.37528',
+ '53794.58495',
+ '54153.85092',
+ '54176.96774',
+ '54368.15913',
+ '54559.35052',
+ '55590.91478',
+ '56118.25532',
+ '52947.95526',
+ '56668.71267',
+ '55683.38206',
+ '54698.05145',
+ '56065.76484',
+ '57480.96989',
+ '57840.23585',
+ '57863.35268',
+ '58054.54407',
+ '58245.73546',
+ '59277.29971',
+ '59804.64025',
+ '56634.3402',
+ '60355.09761',
+ '59369.76699',
+ '58384.43638',
+ '59752.14978',
+ '57212.56549',
+ '57571.83146',
+ '57594.94828',
+ '57786.13967',
+ '57977.33106',
+ '59008.89531',
+ '59536.23585',
+ '56365.9358',
+ '60086.69321',
+ '59101.3626',
+ '58116.03198',
+ '59483.74538',
+ '35548.66557',
+ '36748.3044',
+ '36603.34665',
+ '35618.01604',
+ '37658.02772',
+ '37681.14454',
+ '37536.18679',
+ '37391.22904',
+ '37246.27129',
+ '36429.01525',
+ '37628.65407',
+ '37987.92004',
+ '39864.52888',
+ '41064.16771',
+ '40919.20995',
+ '39933.87934',
+ '41973.89103',
+ '41997.00785',
+ '41852.0501',
+ '41707.09234',
+ '41562.13459',
+ '40744.87855',
+ '41944.51738',
+ '42303.78334',
+ '43653.86747',
+ '44853.50629',
+ '44708.54854',
+ '43723.21793',
+ '45763.22961',
+ '45786.34644',
+ '45641.38868',
+ '45496.43093',
+ '45351.47318',
+ '44534.21714',
+ '45733.85596',
+ '46093.12193',
+ '48603.47722',
+ '49803.11604',
+ '49658.15829',
+ '48672.82768',
+ '50712.83937',
+ '50735.95619',
+ '50590.99843',
+ '50446.04068',
+ '50301.08293',
+ '49483.82689',
+ '50683.46571',
+ '51042.73168',
+ '48468.33611',
+ '49667.97494',
+ '49523.01719',
+ '48537.68657',
+ '50577.69826',
+ '50600.81508',
+ '50455.85733',
+ '50310.89958',
+ '50165.94182',
+ '49348.68578',
+ '50548.32461',
+ '50907.59057',
+ '14595.76991',
+ '16156.44285',
+ '11828.56639',
+ '11982.67852',
+ '18859.77355',
+ '23495.87428',
+ '19167.99782',
+ '14840.12136',
+ '21717.21638',
+ '12907.35133',
+ '18663.94921',
+ '27782.03853',
+ '26634.93392',
+ '37994.01755',
+ '33666.14108',
+ '33820.25322',
+ '40697.34825',
+ '45333.44898',
+ '41005.57252',
+ '36677.69605',
+ '43554.79108',
+ '34744.92602',
+ '40501.5239',
+ '49619.61323',
+ '42968.27913',
+ '54327.36276',
+ '49999.48629',
+ '50153.59843',
+ '57030.69346',
+ '61666.79419',
+ '57338.91772',
+ '53011.04126',
+ '59888.13629',
+ '51078.27123',
+ '56834.86911',
+ '65952.95844',
+ '52596.49378',
+ '63955.57741',
+ '59627.70094',
+ '59781.81308',
+ '66658.90811',
+ '71295.00884',
+ '66967.13237',
+ '62639.25591',
+ '69516.35094',
+ '60706.48588',
+ '66463.08376',
+ '75581.17309',
+ '63412.58869',
+ '74771.67231',
+ '70443.79585',
+ '70597.90799',
+ '77475.00301',
+ '82111.10374',
+ '77783.22728',
+ '73455.35082',
+ '80332.44585',
+ '71522.58079',
+ '77279.17867',
+ '86397.268',
+ '14351.93927',
+ '13776.27948',
+ '13872.91798',
+ '14529.80506',
+ '13505.94641',
+ '12818.23691',
+ '13587.1737',
+ '13571.76249',
+ '12547.90384',
+ '13428.89034',
+ '13637.57856',
+ '12725.76963',
+ '14075.79367',
+ '13500.13388',
+ '13596.77239',
+ '14253.65946',
+ '13229.80081',
+ '12542.09131',
+ '13311.0281',
+ '13295.61689',
+ '12271.75824',
+ '13152.74475',
+ '13361.43296',
+ '12449.62403',
+ '13710.89863',
+ '13135.23884',
+ '13231.87734',
+ '13888.76442',
+ '12864.90577',
+ '12177.19627',
+ '12946.13306',
+ '12930.72184',
+ '11906.8632',
+ '12787.8497',
+ '12996.53792',
+ '12084.72899',
+ '13036.78039',
+ '12461.12061',
+ '12557.75911',
+ '13214.64618',
+ '12190.78754',
+ '11503.07803',
+ '12272.01482',
+ '12256.60361',
+ '11232.74496',
+ '12113.73147',
+ '12322.41968',
+ '11410.61075',
+ '14110.00619',
+ '13534.3464',
+ '13630.9849',
+ '14287.87198',
+ '13264.01333',
+ '12576.30383',
+ '13345.24062',
+ '13329.82941',
+ '12305.97076',
+ '13186.95726',
+ '13395.64548',
+ '12483.83655'];
+        var i;
+        reg=reg.toLowerCase().trim();
+        if(reg=="north") i=0;
+        else if(reg=="west") i=59;
+        else if(reg=="south") i=119;
+        else if(reg=="east") i=179;
+        else if(reg=="north east") i=239;
+        else
+        {
+            alert("There are only 5 regions-North,West,South,East and North East.\n");return;
+        }
+        if(y<2021|| y>2025)
+        {
+            alert("There is only 5 years data-2021,2022,2023,2024,2025.\n");return;
+        }
+        if(m<0||m>12)
+        {
+            alert("There are only 12 months in the year.\n");return;
+        }
+        i=i+12*(y-2021)+(m-1);
+        alert("Electricity consumption in month number "+m+" of year "+y+" in region"+reg+" is:\n"+pred[i]+" MW.");
+}
+
+
+                        </script>
+                      </form>
+                      <div onclick="exec()" class="title" style="color:rgb(68, 216, 23); background-color:rgb(0,0,0);">Submit the form by clicking this.</div>
+                    <p>Our project takes in <b>monthly</b> data for the last 5 years for 15 parameters affecting a state's rice & wheat prices:<br></p>
+                    <ol>
+                        <li>Population</li>
+                        <li>Percentage of rural and urban population</li>
+                        <li>GDP Per Capita</li>
+                        <li>Rice Rate/Kg</li>
+                        <li>Wheat Rate/Kg.</li>
+                        <li>Average Temperature.</li>
+                        <li>Total Rainfall</li>
+                        <li>WPI of Rice</li>
+                        <li>WPI of Wheat</li>
+                        <li>Diesel Prices</li>
+                        <li>₹ vs $</li>
+                        <li>Staple Crop Preference</li>
+                        <li>Rice Pref Percent</li>
+                        <li>Wheat Pref Percent</li>
+                        <li>Natural Disaster</li>
+                    </ol>
+                    
+                        
+    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- teams section start -->
+    <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title">T9 Group</h2>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="ny.jpeg" alt="">
+                        <div class="text">Neil Yardi</div>
+                        <p><b>CONTRIBUTIONS:</b><br>Dataset Building<br>Data Visualization<br>Data Science</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="py.jpg" alt="">
+                        <div class="text">Prathamesh Yadav</div>
+                        <p><b>CONTRIBUTIONS:</b><br>Dataset Building<br>Data Visualization<br>Data Science</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="yf.jpeg" alt="">
+                        <div class="text">Yahya Farooqui</div>
+                        <p><b>CONTRIBUTIONS:</b><br>Dataset Building<br>Website Hosting<br>Data Science</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="sy.jpeg" alt="">
+                        <div class="text">Sharvari Yadnik</div>
+                        <p><b>CONTRIBUTIONS:</b><br>Dataset Building<br>Website Beautification<br>Data Visualization</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="yy.jpg" alt="">
+                        <div class="text">Yash Yadav</div>
+                        <p><b>CONTRIBUTIONS:</b><br>Dataset Building<br>Website Structure<br>Data Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Feedback</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>We would love to hear your comments and suggestions as they make us better, smarter and more aware and help us improve.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Group ID</div>
+                                <div class="sub-title">T9</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">VIT Pune, 666, Upper Market Rd, Upper Indira Nagar, Bibwewadi, Pune, Maharashtra 411037</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title"><a href="mailto: t9group02@gmail.com">t9group02@gmail.com</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-book"></i>
+                            <div class="info">
+                                <div class="head">Resources</div>
+                                <div class="sub-title"><a href="https://docs.google.com/presentation/d/1hCXD7wOwpHHy5jyxcC1jnsxpD0Jf0XDp/edit#slide=id.p1">PPT</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Reach out to us.</div>
+                    <form action="https://formspree.io/f/mvodqbla"  method="POST">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" name="w3lName" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email"name="w3lSender" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" name="w3lSubject"  required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Message.." name="w3lMessage" required></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By <a href="mailto: t9group02@gmail.com">T9 Group</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+    </footer>
+
+    <script src="script.js"></script>
+<!--    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          
+          setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
+        </script> -->
+</body>
+</html>
